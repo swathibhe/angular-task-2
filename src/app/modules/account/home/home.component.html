@@ -1,0 +1,18 @@
+<div class="header">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="row">
+            <div class="col-6 ">
+                <div class="pad-left">
+                    <button type="button" class="btn btn-outline-secondary" (click)="dashboard()">Home</button>
+                </div>
+            </div>
+            <div class="col-6" style="text-align:right">
+                <div class="pad-right">
+                    <button type="button" class="btn btn-outline-secondary"
+                        (click)="logoutPopup(content)">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<router-outlet></router-outlet>

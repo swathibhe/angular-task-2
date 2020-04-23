@@ -1,0 +1,34 @@
+<div [ngClass]="{'cover-spin': spinnerShow===true}"></div>
+<div *ngIf="assignedData !== null && assignedData !== undefined">
+    <div *ngIf="assignedData.length >0">
+        <div class="tableDivAlign">
+            <div class="row">
+                <div class="col moveColAlign text-center">
+                    <h4>User List</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col tableAlign">
+                    <table class="table table-bordered table-responsive text-nowrap">
+                        <thead>
+                            <tr>
+                                <th *ngFor="let key of userListDataKey">
+                                    {{key.displayName}}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor='let rest of assignedData'>
+                                <td *ngFor="let key of userListDataKey ; let i = index ">
+                                    <span *ngIf="key.keyName !== 'button'">{{rest[key.keyName]}}</span>
+                                    <button *ngIf="key.keyName === 'button'" class="btn btn-primary text-center"
+                                        (click)="updateProfile(i)">Update</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

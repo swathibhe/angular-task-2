@@ -1,0 +1,17 @@
+.tableDivAlign {
+    margin-top: 25px;
+    .tableAlign {
+      display: flex !important;
+      justify-content: center !important;
+      .table {
+        margin-bottom: 30px;
+        thead {
+          background-color: var(--table-header);
+          color: black;
+        }
+      }
+      ::ng-deep .table-responsive {
+        width: auto;
+      }
+    }
+  }
